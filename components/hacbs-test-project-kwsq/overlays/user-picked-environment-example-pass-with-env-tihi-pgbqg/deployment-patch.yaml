@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: hacbs-test-project-kwsq
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: var_name
+          value: test
+        image: quay.io/mbasti-test-org/nbe-e2e-dupz-tenant/integ-app-rpym/hacbs-test-project-kwsq@sha256:652a09bd0d1123c84288062ae6e95cf547872d60b7944e024a81d245f54c2ab0
+        name: hacbs-jvm-build-test-project
+        resources: {}
+status: {}
